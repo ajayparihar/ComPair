@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    File Name: index.html
+    Description: This file contains the main structure of the ComPair tool,
+                 a text file comparison tool that allows users to upload
+                 two text files and compare their contents line by line.
+    Author: Ajay Singh
+    Version: 1.0
+    Date: 23-10-2024
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComPair</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ComPair</h1>
+        </div>
+
+        <!-- Button Container for file inputs and the compare button -->
+        <div class="button-container">
+            <input type="file" id="file1">
+            <input type="file" id="file2">
+            <button id="compareBtn">Compare</button>
+        </div>
+
+        <!-- File names display -->
+        <div class="file-names" id="fileNames"></div>
+
+        <!-- Result div to display comparison -->
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

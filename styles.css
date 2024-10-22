@@ -1,0 +1,202 @@
+/*
+File Name: styles.css
+Description: Styles for the ComPair tool, enhancing the visual appearance
+             of the interface with layout, colors, and hover effects.
+Author: Ajay Singh
+Version: 1.0
+Date: 23-10-2024
+*/
+
+/* CSS Variables for consistent theming */
+:root {
+    --background-dark: #1a1a1a;
+    --container-bg: #2c2c2c;
+    --input-bg: #3c3c3c;
+    --text-light: #ffffff;
+    --text-grey: #cccccc;
+    --border-color: #666;
+    --highlight-color: #007bff;
+    --title-color: #007bff;
+    --hover-bg: #555;
+    --separator-color: #ccc;
+    --removed-line: #dc3545;
+    --changed-line: #28a745;
+}
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Container styles */
+.container {
+    width: 95vw; /* Slightly smaller for padding */
+    height: 95vh;
+    background-color: var(--container-bg);
+    border-radius: 8px; /* Slight rounding for container */
+    padding: 30px; /* More padding for breathing room */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    color: #ffcc00;
+    font-size: 26px; /* Larger font for header */
+    margin-bottom: 20px; /* Increased space below the header */
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 25px;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the buttons */
+    align-items: center;
+    flex-direction: column; /* Stack the buttons vertically */
+    margin: 20px 0;
+}
+
+/* Input and button styles */
+input[type="file"],
+button {
+    padding: 12px;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    margin: 15px 0; /* Space between inputs and buttons */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* File input styles */
+input[type="file"] {
+    border: 2px solid var(--title-color);
+    background-color: var(--input-bg);
+    color: var(--text-light);
+}
+
+/* Button styles */
+button {
+    background-color: var(--title-color);
+    color: var(--text-light);
+    border: none;
+    font-size: 16px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #339cff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); /* Depth effect */
+}
+
+/* File names display styles */
+.file-names {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: var(--text-grey);
+}
+
+/* Line styles */
+.line {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background-color: var(--input-bg);
+    transition: background-color 0.3s;
+    justify-content: space-between;
+}
+
+/* Vertical Separator for line comparison */
+.line::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: var(--separator-color);
+    margin: 0 10px;
+}
+
+/* Line hover effect */
+.line:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Line number styles */
+.line-number {
+    width: 60px; /* Fixed width for line numbers */
+    text-align: right;
+    color: #aaa;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Line content styles */
+.line-content {
+    flex: 1;
+    white-space: pre-wrap;
+}
+
+/* Highlighting styles */
+.removed {
+    color: var(--removed-line);
+    text-decoration: line-through;
+}
+
+.changed {
+    color: var(--changed-line);
+    font-weight: bold;
+}
+
+.equal {
+    color: var(--text-light);
+}
+
+/* Scrollbar styling */
+.container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
