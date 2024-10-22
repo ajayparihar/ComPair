@@ -14,6 +14,10 @@ ComPair is a simple web-based tool designed to help users compare the contents o
 2. Click the "Compare" button to initiate the comparison.
 3. View the comparison results, with differences highlighted for clarity.
 
+## Live Demo
+
+You can try ComPair online at: [ComPair Tool](https://ajayparihar.github.io/ComPair)
+
 ## Author
 
 - **Ajay Singh**  
